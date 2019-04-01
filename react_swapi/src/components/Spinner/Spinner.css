@@ -1,0 +1,106 @@
+@keyframes lds-wedges {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes lds-wedges {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.lds-wedges {
+    position: relative;
+}
+
+.lds-wedges>div>div {
+    -webkit-transform-origin: 100px 100px;
+    transform-origin: 100px 100px;
+    -webkit-animation: lds-wedges 3.9s linear infinite;
+    animation: lds-wedges 3.9s linear infinite;
+    opacity: 0.8;
+}
+
+.lds-wedges>div>div>div {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px 0 0 0;
+    -webkit-transform-origin: 100px 100px;
+    transform-origin: 100px 100px;
+}
+
+.lds-wedges>div div:nth-child(1)>div {
+    background: #1d0e0b;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.lds-wedges>div div:nth-child(1) {
+    -webkit-animation-duration: 0.975s;
+    animation-duration: 0.975s;
+}
+
+.lds-wedges>div div:nth-child(2)>div {
+    background: #774023;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.lds-wedges>div div:nth-child(2) {
+    -webkit-animation-duration: 1.3s;
+    animation-duration: 1.3s;
+}
+
+.lds-wedges>div div:nth-child(3)>div {
+    background: #d88c51;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.lds-wedges>div div:nth-child(3) {
+    -webkit-animation-duration: 1.95s;
+    animation-duration: 1.95s;
+}
+
+.lds-wedges>div div:nth-child(4)>div {
+    background: #f3e7c9;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.lds-wedges>div div:nth-child(4) {
+    -webkit-animation-duration: 3.9s;
+    animation-duration: 3.9s;
+}
+
+.lds-wedges {
+    width: 100%;
+    height: 100%;
+    width: 171px !important;
+    height: 171px !important;
+    -webkit-transform: translate(-85.5px, -85.5px) scale(0.855) translate(85.5px, 85.5px);
+    transform: translate(-85.5px, -85.5px) scale(0.855) translate(85.5px, 85.5px);
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
