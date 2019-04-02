@@ -7,17 +7,16 @@ import PlanetView from './PlanetView';
 import './RandomPlanet.css';
 
 export default class RandomPlanet extends Component {
-	constructor() {
-		super();
-
-		this.updatePlanet();
-	};
-
 	swapiService = new SwapiService();
 
 	state = {
 		planet: {},
 		loading: true
+	};
+
+	componentDidMount() {
+		this.updatePlanet();
+		this.interval = setInterval(this.updatePlanet, 10000);
 	}
 
 	onPlanetLoaded = (planet) => {
@@ -35,8 +34,8 @@ export default class RandomPlanet extends Component {
 		});
 	};
 
-	updatePlanet() {
-		const id = Math.floor(Math.random()*25 + 1);
+	updatePlanet = () => {
+		const id = Math.floor(Math.random()*25) + 3;
 
 		this.swapiService
 			.getPlanet(id)
