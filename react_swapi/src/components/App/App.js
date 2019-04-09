@@ -3,9 +3,10 @@ import React, {Component} from 'react';
 import Header from '../Header';
 // import RandomPlanet from '../RandomPlanet';
 // import ItemList from '../ItemList';
-import ItemDetails, { Record } from '../ItemDetails/ItemDetails';
+import ItemDetails from '../ItemDetails/ItemDetails';
 // import PeoplePage from '../PeoplePage';
 import Row from '../Row';
+import Record from '../Record';
 
 import './App.css';
 import SwapiService from '../../services/swapi-service';
@@ -26,6 +27,7 @@ export default class App extends Component {
         getData={getPerson}
         getImageUrl={getPersonImage} >
         <Record field="gender" label="Gender" />
+        <Record field="eyeColor" label="Eye Color" />
       </ItemDetails>
     );
     const starshipDetails = (
@@ -33,7 +35,9 @@ export default class App extends Component {
         itemId={9}
         getData={getStarship}
         getImageUrl={getStarshipImage} >
-          <Record field="gender" label="Gender" />
+          <Record field="model" label="Model" />
+          <Record field="length" label="Length" />
+          <Record field="length" label="Length" />
         </ItemDetails>
     );
     return (
