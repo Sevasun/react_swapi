@@ -44,23 +44,7 @@ export default class App extends Component {
       <ErrorBoundry>
         <div className="container">
           <Header />
-          {/* <RandomPlanet />
-          <PeoplePage /> */}
-
           <Row left={personDetails} right={starshipDetails} />
-
-          {/* <div className="row mb2">
-            <div className="col-md-6">
-                <ItemList
-                    renderItem={ (item) => item.name }
-                    getData = { this.swapiService.getAllPlanets }
-                    onItemSelected={this.onPersonSelected} />
-            </div>
-            <div className="col-md-6">
-                <ItemDetails
-                    personId={this.state.selectedPerson} />
-            </div>
-          </div> */}
         </div>
       </ErrorBoundry>
     );
